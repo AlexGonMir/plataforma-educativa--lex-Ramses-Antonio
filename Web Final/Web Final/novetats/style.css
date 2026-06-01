@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  --color-darkslateblue: #404575;
+  --color-darkslategray: #30303f;
+  --color-gray: rgba(255, 255, 255, 0.8);
+  --color-gray-muted: rgba(255, 255, 255, 0.6);
+  --color-white: #fff;
+
+  --font-audiowide: Audiowide, Arial, sans-serif;
+
+  --fs-19: 19px;
+  --fs-24: 24px;
+  --fs-26: 26px;
+  --fs-32: 32px;
+  --fs-40: 40px;
+}
+
+/* ── Layout principal ── */
+.novetats {
+  width: 100%;
+  background-color: var(--color-darkslategray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 87px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* ── Header ── */
+.header {
+  align-self: stretch;
+  background-color: var(--color-darkslateblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px 19px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-sizing: border-box;
+  font-size: var(--fs-32);
+  color: var(--color-white);
+  font-family: var(--font-audiowide);
+}
+
+.header2 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1198px;
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  min-width: 102px;
+  max-width: 216px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  height: 102px;
+  width: 102px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: var(--fs-32);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  text-decoration: none;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Main ── */
+.main {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px 30px 0;
+  gap: 80px;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--color-white);
+  font-family: var(--font-audiowide);
+}
+
+/* ── Bloc de notícia ── */
+.news-block {
+  width: 100%;
+  max-width: 1196px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.news-img {
+  width: 100%;
+  height: 350px;
+  border-radius: 50px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-title {
+  margin: 0;
+  font-size: var(--fs-40);
+  font-weight: 400;
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+}
+
+.news-desc {
+  margin: 0;
+  font-size: var(--fs-24);
+  font-weight: 400;
+  font-family: var(--font-audiowide);
+  color: var(--color-gray-muted);
+}
+
+
+/* ── Footer ── */
+.footer {
+  align-self: stretch;
+  background-color: var(--color-darkslateblue);
+  display: flex;
+  justify-content: center;
+  padding: 64px 30px;
+  box-sizing: border-box;
+  font-size: var(--fs-32);
+  color: var(--color-gray);
+  font-family: var(--font-audiowide);
+}
+
+.footer-inner {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1198px;
+}
+
+.monlau,
+.poltica-de-privacitat {
+  margin: 0;
+  flex: 1;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.monlau {
+  display: inline-block;
+  min-width: 215px;
+  text-align: center;
+}
+
+.poltica-de-privacitat {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  min-width: 296px;
+  max-width: 604px;
+}
+
+
+.monlau {
+  display: inline-block;
+  min-width: 215px;
+  max-width: 100%;
+}
+
+.poltica-de-privacitat {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  min-width: 296px;
+  max-width: 606px;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 1200px) {
+  .header2,
+  .news-block {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .news-title {
+    font-size: var(--fs-32);
+  }
+  .nav-link,
+  .monlau,
+  .poltica-de-privacitat {
+    font-size: var(--fs-26);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .novetats {
+    gap: 43px;
+  }
+  .main {
+    gap: 50px;
+  }
+  .news-img {
+    height: 220px;
+    border-radius: 30px;
+  }
+  .poltica-de-privacitat {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .novetats {
+    gap: 22px;
+  }
+  .main {
+    gap: 36px;
+  }
+  .news-title {
+    font-size: var(--fs-24);
+  }
+  .news-desc,
+  .monlau,
+  .poltica-de-privacitat {
+    font-size: var(--fs-19);
+  }
+}

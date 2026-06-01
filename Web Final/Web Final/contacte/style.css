@@ -1,0 +1,321 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  --color-darkslateblue: #404575;
+  --color-darkslategray: #30303f;
+  --color-card-bg: #21202e;
+  --color-input-bg: #1a1925;
+  --color-gray: rgba(255, 255, 255, 0.8);
+  --color-gray-muted: rgba(255, 255, 255, 0.6);
+  --color-btn: #4e5170;
+  --color-btn-hover: #737896;
+  --color-white: #fff;
+
+  --font-audiowide: Audiowide, Arial, sans-serif;
+
+  --fs-19: 19px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-26: 26px;
+  --fs-32: 32px;
+  --fs-36: 36px;
+  --fs-40: 40px;
+}
+
+/* ── Layout principal ── */
+.contacte {
+  width: 100%;
+  background-color: var(--color-darkslategray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* ── Header ── */
+.header {
+  align-self: stretch;
+  background-color: var(--color-darkslateblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px 19px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-sizing: border-box;
+}
+
+.header2 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1198px;
+  padding-right: 33px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  min-width: 102px;
+  max-width: 217px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  height: 102px;
+  width: 102px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: var(--fs-32);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  text-decoration: none;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Main ── */
+.main-content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px 60px;
+  gap: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--color-white);
+  font-family: var(--font-audiowide);
+}
+
+/* ── Capçalera ── */
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.contactans {
+  margin: 0;
+  font-size: var(--fs-40);
+  font-weight: 400;
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+}
+
+.tens-algun-dubte {
+  margin: 0;
+  font-size: var(--fs-20);
+  font-weight: 400;
+  font-family: var(--font-audiowide);
+  color: var(--color-gray-muted);
+}
+
+/* ── Formulari ── */
+.form-body {
+  width: 100%;
+  max-width: 1196px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+
+.left-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 280px;
+  max-width: 560px;
+}
+
+.right-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-group--full {
+  height: 100%;
+}
+
+.field-label {
+  font-size: var(--fs-24);
+  font-family: var(--font-audiowide);
+  color: var(--color-gray-muted);
+}
+
+.field-input {
+  background-color: var(--color-input-bg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 16px 20px;
+  font-size: var(--fs-24);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.field-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.field-input:focus {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.field-textarea {
+  resize: none;
+  min-height: 240px;
+  height: 100%;
+}
+
+/* ── Botó ── */
+.enroll-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 24px 60px;
+  background-color: var(--color-btn);
+  border-radius: 25px;
+  font-size: var(--fs-36);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  transition: background-color 0.2s;
+}
+
+.enroll-btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+/* ── Missatge enviat ── */
+.sent-msg {
+  display: none;
+  margin: 0;
+  font-size: var(--fs-32);
+  font-family: var(--font-audiowide);
+  color: var(--color-gray);
+}
+
+/* ── Footer ── */
+.footer {
+  align-self: stretch;
+  background-color: var(--color-darkslateblue);
+  display: flex;
+  justify-content: center;
+  padding: 64px 30px;
+  box-sizing: border-box;
+  font-size: var(--fs-32);
+  color: var(--color-gray);
+  font-family: var(--font-audiowide);
+}
+
+.footer-inner {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1198px;
+}
+
+.monlau,
+.poltica-de-privacitat {
+  margin: 0;
+  flex: 1;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.monlau {
+  display: inline-block;
+  min-width: 215px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.poltica-de-privacitat {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  min-width: 296px;
+  max-width: 606px;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 1050px) {
+  .nav-link,
+  .monlau,
+  .poltica-de-privacitat {
+    font-size: var(--fs-26);
+  }
+  .contactans {
+    font-size: var(--fs-32);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contacte {
+    gap: 30px;
+  }
+  .left-fields {
+    max-width: 100%;
+  }
+  .poltica-de-privacitat {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contacte {
+    gap: 20px;
+  }
+  .contactans {
+    font-size: var(--fs-24);
+  }
+  .tens-algun-dubte {
+    font-size: 16px;
+  }
+  .field-label,
+  .field-input,
+  .monlau,
+  .poltica-de-privacitat {
+    font-size: var(--fs-19);
+  }
+  .enroll-btn {
+    font-size: var(--fs-24);
+    padding: 18px 40px;
+  }
+}
