@@ -1,0 +1,342 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  --color-darkslateblue: #404575;
+  --color-darkslategray: #30303f;
+  --color-card-bg: #21202e;
+  --color-gray: rgba(255, 255, 255, 0.8);
+  --color-btn: #4e5170;
+  --color-btn-hover: #737896;
+  --color-white: #fff;
+
+  --font-audiowide: Audiowide, Arial, sans-serif;
+
+  --fs-19: 19px;
+  --fs-22: 22px;
+  --fs-24: 24px;
+  --fs-26: 26px;
+  --fs-32: 32px;
+  --fs-36: 36px;
+}
+
+/* ── Layout principal ── */
+.geografia {
+  width: 100%;
+  background-color: var(--color-darkslategray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 62px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* ── Header ── */
+.header {
+  align-self: stretch;
+  background-color: var(--color-darkslateblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px 19px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-sizing: border-box;
+  font-size: var(--fs-32);
+  color: var(--color-white);
+  font-family: var(--font-audiowide);
+}
+
+.header2 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1198px;
+  padding-right: 33px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  min-width: 102px;
+  max-width: 217px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  height: 102px;
+  width: 102px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: var(--fs-32);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  text-decoration: none;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Main ── */
+.main {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 30px 60px;
+  gap: 48px;
+  box-sizing: border-box;
+  color: var(--color-white);
+  font-family: var(--font-audiowide);
+}
+
+/* ── Targeta instructor ── */
+.instructor-card {
+  width: 100%;
+  max-width: 1033px;
+  background-color: var(--color-card-bg);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 39px 60px 38px;
+  box-sizing: border-box;
+}
+
+.instructor-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  min-width: 200px;
+}
+
+.instructor-img {
+  width: 224px;
+  height: 224px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.instructor-name {
+  margin: 0;
+  font-size: var(--fs-32);
+  font-weight: 400;
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.course-img {
+  height: 272px;
+  width: 468px;
+  border-radius: 50px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/* ── Blocs de contingut ── */
+.section-block {
+  width: 100%;
+  max-width: 1033px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: var(--fs-36);
+  font-weight: 400;
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: var(--fs-36);
+  font-weight: 400;
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+}
+
+.section-text {
+  margin: 0;
+  font-size: var(--fs-24);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  line-height: 1.6;
+  max-width: 710px;
+}
+
+/* ── Llista temari ── */
+.temari-list {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: var(--fs-24);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  line-height: 40px;
+  list-style: disc;
+}
+
+/* ── Botó ── */
+.enroll-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 24px 60px;
+  background-color: var(--color-btn);
+  border-radius: 25px;
+  font-size: var(--fs-36);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  transition: background-color 0.2s;
+}
+
+.enroll-btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+
+/* ── Footer ── */
+.footer {
+  align-self: stretch;
+  background-color: var(--color-darkslateblue);
+  display: flex;
+  justify-content: center;
+  padding: 64px 30px;
+  box-sizing: border-box;
+  font-size: var(--fs-32);
+  color: var(--color-gray);
+  font-family: var(--font-audiowide);
+}
+
+.footer-inner {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1198px;
+}
+
+.monlau,
+.poltica-de-privacitat {
+  margin: 0;
+  flex: 1;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.monlau {
+  display: inline-block;
+  min-width: 215px;
+  text-align: center;
+}
+
+.poltica-de-privacitat {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  min-width: 296px;
+  max-width: 604px;
+}
+
+
+.monlau {
+  display: inline-block;
+  min-width: 215px;
+  max-width: 100%;
+}
+
+.poltica-de-privacitat {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  min-width: 296px;
+  max-width: 606px;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 1050px) {
+  .instructor-name,
+  .section-title,
+  .section-subtitle {
+    font-size: 29px;
+  }
+  .nav-link,
+  .monlau,
+  .poltica-de-privacitat {
+    font-size: var(--fs-26);
+  }
+  .enroll-btn {
+    font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .geografia {
+    gap: 31px;
+  }
+  .instructor-card {
+    justify-content: center;
+  }
+  .course-img {
+    width: 100%;
+    height: 200px;
+  }
+  .poltica-de-privacitat {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .geografia {
+    gap: 15px;
+  }
+  .instructor-card {
+    padding: 25px 20px;
+    border-radius: 30px;
+  }
+  .instructor-img {
+    width: 160px;
+    height: 160px;
+  }
+  .instructor-name,
+  .section-title,
+  .section-subtitle {
+    font-size: var(--fs-22);
+  }
+  .section-text,
+  .temari-list {
+    font-size: var(--fs-19);
+    line-height: 32px;
+  }
+  .enroll-btn {
+    font-size: var(--fs-22);
+    padding: 18px 40px;
+  }
+  .monlau,
+  .poltica-de-privacitat {
+    font-size: var(--fs-19);
+  }
+}

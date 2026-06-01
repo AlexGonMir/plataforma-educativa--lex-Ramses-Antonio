@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  --color-darkslateblue: #404575;
+  --color-darkslategray: #30303f;
+  --color-gray: rgba(255, 255, 255, 0.8);
+  --color-white: #fff;
+
+  --font-audiowide: Audiowide, Arial, sans-serif;
+
+  --fs-19: 19px;
+  --fs-26: 26px;
+  --fs-32: 32px;
+
+  --br-50: 50px;
+  --course-img-height: 300px;
+}
+
+/* ── Layout principal ── */
+.cursos {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-darkslategray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 88px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* ── Header ── */
+.header {
+  align-self: stretch;
+  background-color: var(--color-darkslateblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px 19px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-sizing: border-box;
+}
+
+.header2 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1198px;
+  padding-right: 33px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  min-width: 102px;
+  max-width: 230px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  height: 102px;
+  width: 102px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-link {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: var(--fs-32);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  text-align: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Contenido principal ── */
+.main-content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 30px 0;
+  gap: 60px;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--color-white);
+  font-family: var(--font-audiowide);
+}
+
+.llista-de-cursos {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 400;
+  text-decoration: underline;
+  font-family: var(--font-audiowide);
+}
+
+/* ── Grid de cursos ── */
+.course-grid {
+  width: 100%;
+  max-width: 1196px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 20px;
+}
+
+/* ── Tarjeta individual ── */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.course-card a {
+  display: block;
+  width: 100%;
+}
+
+.course-img {
+  width: 100%;
+  height: var(--course-img-height);
+  border-radius: var(--br-50);
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.course-label {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: var(--fs-32);
+  font-family: var(--font-audiowide);
+  color: var(--color-white);
+  text-align: center;
+  width: 100%;
+}
+
+/* ── Footer ── */
+.footer {
+  align-self: stretch;
+  background-color: var(--color-darkslateblue);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  padding: 64px 0;
+  gap: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--fs-32);
+  color: var(--color-gray);
+  font-family: var(--font-audiowide);
+}
+
+.monlau,
+.poltica-de-privacitat {
+  margin: 0;
+  flex: 1;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.monlau {
+  display: inline-block;
+  min-width: 215px;
+}
+
+.poltica-de-privacitat {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  min-width: 296px;
+  max-width: 604px;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 1050px) {
+  .llista-de-cursos {
+    font-size: 51px;
+  }
+  .nav-link,
+  .course-label,
+  .monlau,
+  .poltica-de-privacitat {
+    font-size: var(--fs-26);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cursos {
+    gap: 44px;
+  }
+  .main-content {
+    gap: 40px;
+  }
+  .course-grid {
+    gap: 30px 16px;
+  }
+  .poltica-de-privacitat {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+  :root {
+    --course-img-height: 220px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cursos {
+    gap: 22px;
+  }
+  .main-content {
+    gap: 25px;
+  }
+  .llista-de-cursos {
+    font-size: 38px;
+  }
+  .nav-link,
+  .course-label,
+  .monlau,
+  .poltica-de-privacitat {
+    font-size: var(--fs-19);
+  }
+}
